@@ -1,99 +1,180 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 
-        <title>Laravel</title>
+<head>
+    <title>E-Quiz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @include('partials.head')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+</head>
 
-            .full-height {
-                height: 100vh;
-            }
+<body>
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+    <!-- Header-->
+    @include('partials.nav')
+    <!-- Header  end -->
 
-            .position-ref {
-                position: relative;
-            }
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+    <!-- Hero  -->
+    @include('partials.hero')
+    <!-- Hero  end -->
 
-            .content {
-                text-align: center;
-            }
 
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+    <!-- categories section -->
+    <section class="categories-section spad">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Course Categories</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris
+                    scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+            </div>
+            <div class="row">
+                <!-- categorie -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="course-list.html">
+                        <div class="categorie-item">
+                            <div class="ci-thumb set-bg" data-setbg="assets/img/categories/1.jpg"></div>
+                            <div class="ci-text">
+                                <h5>IT Development</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                <span>120 Courses</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <!-- categorie -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="course-list.html">
+                        <div class="categorie-item">
+                            <div class="ci-thumb set-bg" data-setbg="assets/img/categories/2.jpg"></div>
+                            <div class="ci-text">
+                                <h5>Web Design</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                <span>70 Courses</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <!-- categorie -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="course-list.html">
+                        <div class="categorie-item">
+                            <div class="ci-thumb set-bg" data-setbg="assets/img/categories/3.jpg"></div>
+                            <div class="ci-text">
+                                <h5>Illustration & Drawing</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                <span>55 Courses</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- categorie -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="course-list.html">
+                        <div class="categorie-item">
+                            <div class="ci-thumb set-bg" data-setbg="assets/img/categories/4.jpg"></div>
+                            <div class="ci-text">
+                                <h5>Social Media</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                <span>40 Courses</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- categorie -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="course-list.html">
+                        <div class="categorie-item">
+                            <div class="ci-thumb set-bg" data-setbg="assets/img/categories/5.jpg"></div>
+                            <div class="ci-text">
+                                <h5>Photoshop</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                <span>220 Courses</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- categorie -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="course-list.html">
+                        <div class="categorie-item">
+                            <div class="ci-thumb set-bg" data-setbg="assets/img/categories/6.jpg"></div>
+                            <div class="ci-text">
+                                <h5>Cryptocurrencies</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                <span>25 Courses</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
-    </body>
+    </section>
+    <!-- categories section end -->
+
+
+    <!-- search section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-warp">
+                <div class="section-title text-white">
+                    <h2>Search your course</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <!-- search form -->
+                        <form class="course-search-form">
+                            <select class="mdb-select md-form ">
+                                <option value="" disabled selected>Choose your Course</option>
+                                <option value="1">Art & Crafts</option>
+                                <option value="2">IT Development</option>
+                                <option value="3">Graphic Design</option>
+                                <option value="4">Web Development</option>
+                                <option value="5">Android</option>
+                                <option value="6">Software</option>
+                                <option value="7">Management</option>
+                                <option value="8">Android</option>
+                                <option value="9">Software</option>
+                            </select>
+                            <select class="mdb-select md-form">
+                                <option value="" disabled selected>Tutorial/Quiz</option>
+                                <option value="1">Tutorials</option>
+                                <option value="2">Quiz</option>
+                            </select>
+                            <button class="site-btn">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- search section end -->
+
+
+
+    <!-- community section -->
+    <section class="community -section spad">
+        <div class="container">
+            <div class="section-title mb-0 pb-2">
+                <h2>Join Our Community Now!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris
+                    scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+            </div>
+            <div class="text-center pt-5">
+                <a href="#" class="site-btn">Register Now</a>
+            </div>
+        </div>
+    </section>
+    <!-- community section end -->
+
+
+    <!-- footer section -->
+    @include('partials.footer')
+</body>
+
 </html>
