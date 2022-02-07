@@ -5,17 +5,17 @@
                 <div class="col-xl-4 mx-auto widget-item text-center">
                     <h4>Menu</h4>
                     <ul class="menu-list ">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="courses.html">Courses</a></li>
-                        <li><a href="blog.html">News</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="{{ route('course.index') }}">Courses</a></li>
+                        <li><a href="{{ route('blog.index') }}">News</a></li>
+                        <li><a href="{{ route('contact.index') }}">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-xl-4 mx-auto widget-item">
                     <h4>Contact Info</h4>
                     <ul class="contact-list">
-                        <li>1481 Creekside Lane <br>Avila Beach, CA 931</li>
-                        <li>+53 345 7953 32453</li>
+                        <li>Uposhohor <br>Sylhet, 3100</li>
+                        <li>017123456789</li>
                         <li>yourmail@gmail.com</li>
                     </ul>
                 </div>
