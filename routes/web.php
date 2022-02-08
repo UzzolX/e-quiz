@@ -42,3 +42,7 @@ Route::get('/contact-us', 'Pages\Contact\ContactController@index')->name('contac
 Route::post('/contact-us/store', 'Contact\ContactController@store')->name('contact.store');
 
 Route::get('/courses', 'Pages\Course\CourseController@index')->name('course.index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
