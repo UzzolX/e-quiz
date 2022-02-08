@@ -2,7 +2,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="{{asset('backend-assets/assets/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="{{asset('backend-assets/assets/dist/img/AdminLTELogo.png')}}" alt="e-quiz logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">e Quiz</span>
     </a>
 
@@ -24,19 +24,27 @@
           
           <li class="nav-header">EXAMPLES</li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="{{ route('category.index') }}" class="nav-link">
               <i class="nav-icon fas fa-calendar-alt"></i>
               <p>
-                Calendar
-                <span class="badge badge-info right">2</span>
+                Categories
+                {{-- <span class="badge badge-info right">2</span> --}}
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a href="{{ route('blogs.index') }}" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
-                Gallery
+                News
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('course.index') }}" class="nav-link">
+              <i class="nav-icon far fa-image"></i>
+              <p>
+                Courses
               </p>
             </a>
           </li>
