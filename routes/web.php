@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'WelcomeController@index')->name('welcome.index');
+
 
 Route::get('/dashboard', 'admin\dashboard\DashboardController@index')->name('dashboard.index');
 

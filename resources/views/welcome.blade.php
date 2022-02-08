@@ -35,83 +35,20 @@
             </div>
             <div class="row">
                 <!-- categorie -->
+                @foreach ($categories as $category)
                 <div class="col-lg-4 col-md-6">
                     <a href="course-list.html">
                         <div class="categorie-item">
-                            <div class="ci-thumb set-bg" data-setbg="assets/img/categories/1.jpg"></div>
+                            <div class="ci-thumb set-bg" data-setbg="{{asset('frontend-assets assets/img/categories/1.jpg')}}"></div>
                             <div class="ci-text">
-                                <h5>IT Development</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                <span>120 Courses</span>
+                                <h5>{{$category->title}}</h5>
+                                <p>{{$category->content}}</p>
+                                {{-- <span>120 Courses</span> --}}
                             </div>
                         </div>
                     </a>
                 </div>
-                <!-- categorie -->
-                <div class="col-lg-4 col-md-6">
-                    <a href="course-list.html">
-                        <div class="categorie-item">
-                            <div class="ci-thumb set-bg" data-setbg="assets/img/categories/2.jpg"></div>
-                            <div class="ci-text">
-                                <h5>Web Design</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                <span>70 Courses</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- categorie -->
-                <div class="col-lg-4 col-md-6">
-                    <a href="course-list.html">
-                        <div class="categorie-item">
-                            <div class="ci-thumb set-bg" data-setbg="assets/img/categories/3.jpg"></div>
-                            <div class="ci-text">
-                                <h5>Illustration & Drawing</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                <span>55 Courses</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- categorie -->
-                <div class="col-lg-4 col-md-6">
-                    <a href="course-list.html">
-                        <div class="categorie-item">
-                            <div class="ci-thumb set-bg" data-setbg="assets/img/categories/4.jpg"></div>
-                            <div class="ci-text">
-                                <h5>Social Media</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                <span>40 Courses</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- categorie -->
-                <div class="col-lg-4 col-md-6">
-                    <a href="course-list.html">
-                        <div class="categorie-item">
-                            <div class="ci-thumb set-bg" data-setbg="assets/img/categories/5.jpg"></div>
-                            <div class="ci-text">
-                                <h5>Photoshop</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                <span>220 Courses</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- categorie -->
-                <div class="col-lg-4 col-md-6">
-                    <a href="course-list.html">
-                        <div class="categorie-item">
-                            <div class="ci-thumb set-bg" data-setbg="assets/img/categories/6.jpg"></div>
-                            <div class="ci-text">
-                                <h5>Cryptocurrencies</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                <span>25 Courses</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
