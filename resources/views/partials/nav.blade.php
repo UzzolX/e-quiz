@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="col-lg-9 col-md-9">
-                <a href="login.html" class="site-btn header-btn">Login</a>
+                <a href="{{ route('login') }}" class="site-btn header-btn">Login</a>
                 <nav class="main-menu">
                     <ul>
                         <li><a href="/">Home</a></li>
