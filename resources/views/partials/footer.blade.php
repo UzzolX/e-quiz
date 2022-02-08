@@ -7,7 +7,7 @@
                     <ul class="menu-list ">
                         <li><a href="/">Home</a></li>
                         <li><a href="{{ route('course.index') }}">Courses</a></li>
-                        <li><a href="{{ route('blog.index') }}">News</a></li>
+                        <li><a href="{{ route('blogs.index') }}">News</a></li>
                         <li><a href="{{ route('contact.index') }}">Contact</a></li>
                     </ul>
                 </div>

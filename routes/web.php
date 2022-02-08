@@ -37,3 +37,5 @@ Route::get('/dashboard/category/{id}/delete', 'admin\category\CategoryController
 
 Route::get('/contact-us', 'Pages\Contact\ContactController@index')->name('contact.index');
 Route::post('/contact-us/store', 'Contact\ContactController@store')->name('contact.store');
+
+Route::get('/courses', 'Pages\Course\CourseController@index')->name('course.index');
