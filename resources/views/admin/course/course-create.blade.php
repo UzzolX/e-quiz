@@ -11,7 +11,7 @@
 <div class="card card-custom">
     <div class="card-header">
         <h3 class="card-title">
-            Add New Blog
+            Add New course
         </h3>
         @if(Session::has('message'))
             <div class="alert alert-success">
@@ -26,14 +26,14 @@
         </div>
     </div>
     <!--begin::Form-->
-    <form action="{{route('blogs.store')}}" enctype="multipart/form-data"  method="post">
+    <form action="{{route('course.store')}}" enctype="multipart/form-data"  method="post">
         
         @csrf
         
         <div class="card-body">
 
             <div class="form-group">
-                <label>Blog Title</label>
+                <label>course Title</label>
                 <input type="text" name="title" class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}"
                     value="{{ old('title') }}" placeholder="title" />
                 @if ($errors->has('title'))
@@ -43,12 +43,12 @@
                 @endif
             </div>
             <div class="form-group">
-                <label for="content">Blog Content<span class="text-danger">*</span></label>
-                <textarea name="content" class="form-control{{ $errors->has('content') ? ' is-invalid' : '' }}" value="{{ old('content') }}"
+                <label for="description">course description<span class="text-danger">*</span></label>
+                <textarea name="description" class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}" value="{{ old('description') }}"
                      rows="10"></textarea>
-                @if ($errors->has('content'))
+                @if ($errors->has('description'))
                 <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('content') }}</strong>
+                    <strong>{{ $errors->first('description') }}</strong>
                 </span>
                 @endif
             </div>
@@ -65,6 +65,16 @@
                 @if ($errors->has('category'))
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $errors->first('category') }}</strong>
+                </span>
+                @endif
+            </div>
+            <div class="form-group mb-1">
+                <label for="content">Course image &nbsp;<span class="text-danger">(image size = 1920 x 1080 )</span></label>
+                <input type="file" title="click to image upload" name="image" class="blogupimage form-control{{ $errors->has('image') ? ' is-invalid' : '' }}"
+                    value="{{ old('image') }}" />
+                @if ($errors->has('image'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('image') }}</strong>
                 </span>
                 @endif
             </div>
