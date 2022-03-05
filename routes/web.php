@@ -20,7 +20,10 @@ Route::get('/', 'WelcomeController@index')->name('welcome.index');
 
 Route::get('/dashboard', 'admin\dashboard\DashboardController@index')->name('dashboard.index');
 
+//Blogs frontend
+Route::get('/blogs', 'Pages\Blog\BlogController@index')->name('blog.index');
 
+//Admin blog
 Route::get('/dashboard/blogs', 'admin\Blogs\BlogsController@index')->name('blogs.index');
 Route::get('/dashboard/blogs/create', 'admin\Blogs\BlogsController@create')->name('blogs.create');
 Route::post('/dashboard/blogs/create', 'admin\Blogs\BlogsController@store')->name('blogs.store');
