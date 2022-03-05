@@ -32,9 +32,9 @@ class CourseController extends Controller
         ]);
 
         $image = $request->file('image');
-
         $new_name = rand() . '.' . $image->getClientOriginalExtension();
         $image->move(public_path('images/course'), $new_name);
+        
         $form_data = array(
             'title'    => $title = $request->title,
             'description'  => $request->description,

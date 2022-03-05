@@ -67,7 +67,7 @@
                 @endif
             </div>
             <div class="form-group mb-1">
-                <label for="description">course image &nbsp;<span class="text-danger">(image size = 1920 x 1080 )</span></label>
+                <label for="image">course image &nbsp;<span class="text-danger">(image size = 1920 x 1080 )</span></label>
                 <input type="file" title="click to image upload" name="image" class="blogupimage form-control{{ $errors->has('image') ? ' is-invalid' : '' }}"
                     value="{{ old('image') }}" /> </br>
                 <img src="{{asset('images/course/'.$course->image)}}" width="70" height="60"> 

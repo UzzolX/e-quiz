@@ -39,7 +39,7 @@
                 <div class="col-lg-4 col-md-6">
                     <a href="course-list.html">
                         <div class="categorie-item">
-                            <div class="ci-thumb set-bg" data-setbg="{{asset('frontend-assets assets/img/categories/1.jpg')}}"></div>
+                            <div class="ci-thumb set-bg" data-setbg="{{ URL::to('/') }}/images/category/{{ $category->image }}"></div>
                             <div class="ci-text">
                                 <h5>{{$category->title}}</h5>
                                 <p>{{$category->content}}</p>

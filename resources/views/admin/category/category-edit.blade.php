@@ -50,6 +50,17 @@
                 </span>
                 @endif
             </div>
+            <div class="form-group mb-1">
+                <label for="image">course image &nbsp;<span class="text-danger">(image size = 1920 x 1080 )</span></label>
+                <input type="file" title="click to image upload" name="image" class="blogupimage form-control{{ $errors->has('image') ? ' is-invalid' : '' }}"
+                    value="{{ old('image') }}" /> </br>
+                <img src="{{asset('images/category/'.$category->image)}}" width="70" height="60"> 
+                @if ($errors->has('image'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('image') }}</strong>
+                </span>
+                @endif
+            </div>
         </div>
         <div class="card-footer">
             <button type="submit" class="btn btn-primary mr-2">Submit</button>
