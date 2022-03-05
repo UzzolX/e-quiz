@@ -88,7 +88,7 @@
 						</div>
 						<div class="course-info">
 							<div class="course-text">
-								<a href="course-list.html">
+								<a href="{{route('singleCourse',[$course->id,$course->slug])}}">
 									<h5>{{ $course->title }}</h5>
 									<p>{{ $course->description }}</p>
 								</a>
