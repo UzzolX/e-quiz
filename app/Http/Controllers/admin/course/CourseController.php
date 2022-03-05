@@ -57,11 +57,7 @@ class CourseController extends Controller
         return view('admin.course.course-show', compact('course'));
     }
 
-    public function singleCourse($id)
-    {
-        $course = Course::findOrFail($id);
-        return view('admin.course.single-course', compact('course'));
-    }
+
 
     public function edit($id)
     {

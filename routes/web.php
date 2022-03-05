@@ -43,6 +43,9 @@ Route::post('/contact-us/store', 'Contact\ContactController@store')->name('conta
 
 Route::get('/courses', 'Pages\Course\CourseController@index')->name('course.index');
 
+// Single Course
+Route::get('/course/{id}', 'Pages\Course\CourseController@singleCourse')->name('singleCourse');
+
 Route::get('/dashboard/course', 'admin\course\CourseController@index')->name('courseList.index');
 Route::get('/dashboard/course/create', 'admin\course\CourseController@create')->name('course.create');
 Route::post('/dashboard/course/create', 'admin\course\CourseController@store')->name('course.store');
@@ -50,7 +53,6 @@ Route::get('/dashboard/course/{id}', 'admin\course\CourseController@show')->name
 Route::get('/dashboard/course/{id}/edit', 'admin\course\CourseController@edit')->name('course.edit');
 Route::post('/dashboard/course/{id}/update', 'admin\course\CourseController@update')->name('course.update');
 Route::get('/dashboard/course/{id}/delete', 'admin\course\CourseController@destroy')->name('course.delete');
-Route::get('/dashboard/course/{id}/{course}', 'admin\course\CourseController@singleCourse')->name('singleCourse');
 
 Auth::routes();
 

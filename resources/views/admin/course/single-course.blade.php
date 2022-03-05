@@ -17,10 +17,10 @@
 	<!-- Header section -->
 	@include('partials.nav')
 	<!-- Header section end -->
-
+	
 
 	<!-- Page info -->
-	<div class="page-info-section set-bg" data-setbg="assets/img/page-bg/1.jpg" style="height: 300px;">
+	<div class="page-info-section set-bg" data-setbg="{{asset('frontend-assets/assets/img/page-bg/1.jpg')}}" style="height: 300px;">
 		<div class="container">
 			<div class="site-breadcrumb">
 				<a href="index.html">Home</a>
@@ -40,8 +40,8 @@
 			<div class="course-meta-area">
 				<div class="row">
 					<div class="col-lg-10 offset-lg-1">
-						<div class="course-note">Featured Course</div>
-						<h3>IT Development</h3>
+						{{-- <div class="course-note">Featured Course</div> --}}
+						<h3>{{ $course->title }}</h3>
 						<div class="course-metas">
 							<div class="course-meta">
 								<div class="course-author">
@@ -56,38 +56,17 @@
 									<p>Development</p>
 								</div>
 							</div>
-							<div class="course-meta">
-								<div class="cm-info">
-									<h6>Reviews</h6>
-									<p>2 Reviews <span class="rating">
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star is-fade"></i>
-									</span></p>
-								</div>
-							</div>
 						</div>
 						<a href="tutorials.html" class="site-btn ">Tutorial</a>
-						<a href="quiz.html" class="site-btn">Get Quiz</a>
 					</div>
 				</div>
 			</div>
-			<assets/img src="assets/img/courses/single.jpg" alt="" class="course-preview">
+			<assets/img src="{{asset('frontend-assets/assets/img/courses/single.jpg')}}" alt="" class="course-preview">
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1 course-list">
 					<div class="cl-item">
 						<h4>Course Description</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur. Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum, ut vulputate mauris ligula a metus. Aenean vel congue diam, sed bibendum ipsum. Nunc vulputate aliquet tristique. Integer et pellentesque urna. Lorem ipsum dolor sit amet, consectetur. Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. </p>
-					</div>
-					<div class="cl-item">
-						<h4>Certification</h4>
-						<p>Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum, ut vulputate mauris ligula a metus. Aenean vel congue diam, sed bibendum ipsum. Nunc vulputate aliquet tristique. Integer et pellentesque urna. Lorem ipsum dolor sit amet, consectetur. Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum.</p>
-					</div>
-					<div class="cl-item">
-						<h4>The Instructor</h4>
-						<p>Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum, ut vulputate mauris ligula a metus. Aenean vel congue diam, sed bibendum ipsum. Nunc vulputate aliquet tristique. Integer et pellentesque urna. Lorem ipsum dolor sit amet, consectetur. Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum, ut vulputate mauris ligula a metus. </p>
+						<p>{{ $course->description }}</p>
 					</div>
 				</div>
 			</div>
@@ -96,14 +75,14 @@
 	<!-- single course section end -->
 
 
-	<!-- Page -->
+	{{-- <!-- Page -->
 	<section class="realated-courses spad">
 		<div class="course-warp">
 			<h2 class="rc-title">Realated Courses</h2>
 			<div class="rc-slider owl-carousel">
 				<!-- course -->
 				<div class="course-item">
-					<div class="course-thumb set-bg" data-setbg="assets/img/courses/1.jpg">
+					<div class="course-thumb set-bg" data-setbg="{{asset('frontend-assets/assets/img/courses/1.jpg')}}">
 					</div>
 					<div class="course-info">
 						<div class="course-text">
@@ -189,7 +168,7 @@
 				<!-- course -->
 			</div>
 		</div>
-	</section>
+	</section> --}}
 	<!-- Page end -->
 
 
