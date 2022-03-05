@@ -20,7 +20,7 @@ class CreateCourseMaterialsTable extends Migration
             $table->text('link')->nullable();
             $table->text('thumbnails')->nullable();
             $table->integer('type')->default(1);
-            $table->integer('status')->default(0);
+            $table->integer('status')->default(1);
             $table->string('created_by')->nullable();
             $table->string('updated_by')->nullable();
             $table->timestamps();
