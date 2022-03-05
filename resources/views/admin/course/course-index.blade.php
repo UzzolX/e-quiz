@@ -54,13 +54,18 @@
                         <td>{{str_limit($row->title,30)}}</td>
                         <td>{{str_limit($row->description,30)}}</td>
                         <td>
-                            <a class=" btn-bg-dark" href="{{route('course.show', [$row->id,$row->slug])}}"> <button type="button" class="btn btn-info btn-sm">View</button>
+                            <a class=" btn-bg-dark" href="{{route('course.show',[$row->id,$row->slug])}}"> <button type="button" class="btn btn-info btn-sm">View</button>
                             </a>
                             <a class=" btn-bg-dark" href="{{route('course.edit',[$row->id])}}"> <button type="button" class="btn btn-info btn-sm">Edit</button>
                             </a>
                             <a href="{{route('course.delete',[$row->id])}}">
                                 <button type="button" class="btn btn-danger btn-sm">
                                     Delete
+                                </button>
+                            </a>
+                            <a href="#">
+                                <button type="button" class="btn btn-info btn-sm">
+                                    Materials
                                 </button>
                             </a>
                         </td>

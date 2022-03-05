@@ -47,10 +47,10 @@ Route::get('/dashboard/course', 'admin\course\CourseController@index')->name('co
 Route::get('/dashboard/course/create', 'admin\course\CourseController@create')->name('course.create');
 Route::post('/dashboard/course/create', 'admin\course\CourseController@store')->name('course.store');
 Route::get('/dashboard/course/{id}', 'admin\course\CourseController@show')->name('course.show');
-Route::get('/dashboard/course/{id}', 'admin\course\CourseController@singleCourse')->name('singleCourse');
 Route::get('/dashboard/course/{id}/edit', 'admin\course\CourseController@edit')->name('course.edit');
 Route::post('/dashboard/course/{id}/update', 'admin\course\CourseController@update')->name('course.update');
 Route::get('/dashboard/course/{id}/delete', 'admin\course\CourseController@destroy')->name('course.delete');
+Route::get('/dashboard/course/{id}/{course}', 'admin\course\CourseController@singleCourse')->name('singleCourse');
 
 Auth::routes();
 

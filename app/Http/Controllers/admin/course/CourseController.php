@@ -9,6 +9,8 @@ use Illuminate\Support\Str;
 
 class CourseController extends Controller
 {
+
+
     public function index()
     {
         $course = Course::latest()->paginate(5);
@@ -34,7 +36,7 @@ class CourseController extends Controller
         $image = $request->file('image');
         $new_name = rand() . '.' . $image->getClientOriginalExtension();
         $image->move(public_path('images/course'), $new_name);
-        
+
         $form_data = array(
             'title'    => $title = $request->title,
             'description'  => $request->description,
@@ -49,7 +51,7 @@ class CourseController extends Controller
         return redirect('dashboard/course')->with('message', 'course created successfully.');
     }
 
-    public function show($id)
+    public function show($id, Course $course)
     {
         $course = Course::findOrFail($id);
         return view('admin.course.course-show', compact('course'));
