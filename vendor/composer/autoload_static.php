@@ -420,6 +420,8 @@ class ComposerStaticInita2f39e5ede30c11669158a9bc6c3581e
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Contact' => __DIR__ . '/../..' . '/app/Contact.php',
         'App\\Course' => __DIR__ . '/../..' . '/app/Course.php',
+        'App\\CourseMaterials' => __DIR__ . '/../..' . '/app/CourseMaterials.php',
+        'App\\Course_Materials' => __DIR__ . '/../..' . '/app/Course_Materials.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
