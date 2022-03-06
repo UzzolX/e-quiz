@@ -20,7 +20,6 @@ class ContactController extends Controller
         $data = $this->validate($request, [
             'name' => 'required',
             'email' => 'required',
-            'phone' => 'required',
             'subject' => 'required',
             'message' => 'required',
         ]);
@@ -28,11 +27,10 @@ class ContactController extends Controller
         Contact::create([
             'name' => request('name'),
             'email' => request('email'),
-            'phone' => request('phone'),
             'subject' => request('subject'),
             'message' => request('message')
         ]);
-        Mail::to('uzzolah@gmail.com')->send(new ContactFormMail($data));
+        Mail::to('abxd@gmail.com')->send(new ContactFormMail($data));
         return redirect()->back()->with('message', 'Message sent successfully');
     }
 }

@@ -37,16 +37,22 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8">
+					@if(Session::has('message'))
+            <div class="alert alert-success">
+                {{Session::get('message')}}
+            </div>
+            @endif
 					<div class="contact-form-warp">
 						<div class="section-title text-white text-left">
 							<h2>Get in Touch</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. </p>
 						</div>
-						<form class="contact-form">
-							<input type="text" placeholder="Your Name">
-							<input type="text" placeholder="Your E-mail">
-							<input type="text" placeholder="Subject">
-							<textarea placeholder="Message"></textarea>
+						<form class="contact-form" action="{{route('contact.store')}}" method="POST">
+							@csrf
+							<input name="name" type="text" placeholder="Your Name">
+							<input name="email" type="text" placeholder="Your E-mail">
+							<input name="subject" type="text" placeholder="Subject">
+							<textarea name="message" placeholder="Message"></textarea>
 							<button class="site-btn">Sent Message</button>
 						</form>
 					</div>
@@ -95,7 +101,7 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
 			</div>
 			<div class="text-center pt-5">
-				<a href="#" class="site-btn">Register Now</a>
+				<a href="{{ route('register') }}" class="site-btn">Register Now</a>
 			</div>
 		</div>
 	</section>

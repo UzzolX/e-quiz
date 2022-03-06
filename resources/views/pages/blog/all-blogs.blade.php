@@ -40,7 +40,7 @@
 					<!-- blog post -->
 					@foreach ($blog as $blog)
 						
-					@endforeach
+					
 					<div class="blog-post">
 						<img src="{{ URL::to('/') }}/images/blogs/{{ $blog->image }}" alt="">
 						<h3>{{ $blog->title }}</h3>
@@ -59,11 +59,12 @@
 						<p>{{ $blog->content }}</p>
 						<a href="#" class="site-btn readmore">Read More</a>
 					</div>
-					<div class="site-pagination">
+					@endforeach
+					{{-- <div class="site-pagination">
 						<span class="active">01.</span>
 						<a href="#">02.</a>
 						<a href="#">03</a>
-					</div>
+					</div> --}}
 				</div>
 			</div>
 		</div>
