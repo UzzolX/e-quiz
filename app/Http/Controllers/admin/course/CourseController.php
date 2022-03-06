@@ -16,7 +16,8 @@ class CourseController extends Controller
 
     public function index()
     {
-        $course = Course::latest()->paginate(5);
+        // $course = Course::latest()->paginate(5);
+        $course = Course::with('user')->where('teacher', Auth::user()->id)->latest()->paginate(5);
         return view('admin.course.course-index', compact('course'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -45,6 +46,7 @@ class CourseController extends Controller
             'description'  => $request->description,
             'image'    => $new_name,
             'category' => $request->category,
+            'teacher' => Auth::user()->id,
             'slug' => Str::slug($title)
 
         );
@@ -103,7 +105,8 @@ class CourseController extends Controller
     public function addCourseMetrial($id)
     {
         $course = Course::findOrFail($id);
-        $courseMetrials = DB::table('course_metrals')->get();
+        // $courseMetrials = DB::table('course_metrals')->get();
+        $courseMetrials = DB::table('course_metrals')->where('course_id', $id)->get();
         return view('admin.course.add-course-metrial', compact('course', 'courseMetrials'));
     }
 

@@ -30,7 +30,7 @@
 	<!-- Page info end -->
 
 
-	<!-- search section -->
+	{{-- <!-- search section -->
 	<section class="search-section">
 		<div class="container">
 			<div class="search-warp">
@@ -64,7 +64,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> --}}
 	<!-- search section end -->
 
 
@@ -95,7 +95,7 @@
 							</div>
 							<div class="course-author">
 								<div class="ca-pic set-bg" data-setbg="{{asset('frontend-assets/assets/img/authors/1.jpg')}}"></div>
-								<p>William Parker, <span>Developer</span></p>
+								<p>{{ $course->user->name }}, <span>{{ $course->user->user_type }}</span></p>
 							</div>
 						</div>
 					</div>

@@ -13,7 +13,8 @@ class CourseController extends Controller
 {
     function index()
     {
-        $course = Course::latest()->paginate(10);
+        // $course = Course::latest()->paginate(10);
+        $course = Course::with('user')->latest()->paginate(10);
         return view('pages.course.course-index', compact('course'));
     }
 
@@ -34,7 +35,8 @@ class CourseController extends Controller
     public function addCourseMetrial($id)
     {
         $course = Course::findOrFail($id);
-        $courseMetrials = DB::table('course_metrals')->get();
+        // $courseMetrials = DB::table('course_metrals')->get();
+        $courseMetrials = DB::table('course_metrals')->where('course_id', $id)->get();
         return view('pages.course.tutorials-index', compact('course', 'courseMetrials'));
     }
 }
