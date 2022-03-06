@@ -20,25 +20,25 @@
         <h1 class="h3 mb-0 text-gray-800">courses</h1>
     </div>
 
-    
+
 
     <!-- Content Row -->
     <div class="row">
-        
+
         <div class="col-xl-12">
             <div class="create">
                 <a href="{{route('course.create')}}" enctype="multipart/form-data">
                     <button type="button" class="btn btn-info btn-sm">Add course</button>
-        
+
                 </a>
             </div>
-        
+
             @if(Session::has('message'))
             <div class="alert alert-success">
                 {{Session::get('message')}}
             </div>
             @endif
-        
+
             <table class="table" style="text-align: center;">
                 <thead>
                     <tr>
@@ -48,24 +48,20 @@
                     </tr>
                 </thead>
                 <tbody class="table-success">
-        
+
                     @foreach ($course as $row)
                     <tr>
                         <td>{{str_limit($row->title,30)}}</td>
                         <td>{{str_limit($row->description,30)}}</td>
                         <td>
-                            <a class=" btn-bg-dark" href="{{route('course.show',[$row->id,$row->slug])}}"> <button type="button" class="btn btn-info btn-sm">View</button>
+                            <a class=" btn-bg-dark" href="{{route('course.show', [$row->id, $row->slug])}}"> <button type="button" class="btn btn-info btn-sm">View</button>
                             </a>
                             <a class=" btn-bg-dark" href="{{route('course.edit',[$row->id])}}"> <button type="button" class="btn btn-info btn-sm">Edit</button>
                             </a>
+                            <a class=" btn-bg-dark" href="{{route('course.metrials', [$row->id, $row->slug])}}"> <button type="button" class="btn btn-success btn-sm">Add Course Metrial</button>
                             <a href="{{route('course.delete',[$row->id])}}">
                                 <button type="button" class="btn btn-danger btn-sm">
                                     Delete
-                                </button>
-                            </a>
-                            <a href="#">
-                                <button type="button" class="btn btn-info btn-sm">
-                                    Materials
                                 </button>
                             </a>
                         </td>
@@ -75,7 +71,7 @@
             </table>
             {{$course->links()}}
         </div>
-        
+
     </div>
 
 </div>

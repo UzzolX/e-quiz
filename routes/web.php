@@ -57,6 +57,17 @@ Route::get('/dashboard/course/{id}/edit', 'admin\course\CourseController@edit')-
 Route::post('/dashboard/course/{id}/update', 'admin\course\CourseController@update')->name('course.update');
 Route::get('/dashboard/course/{id}/delete', 'admin\course\CourseController@destroy')->name('course.delete');
 
+Route::get('/dashboard/course/{id}/{slug}/metrials', 'admin\course\CourseController@addCourseMetrial')->name('course.metrials');
+Route::post('/dashboard/course/{id}/{slug}/metrials', 'admin\course\CourseController@metrialStore')->name('course.metrials');
+Route::post('/dashboard/course/{id}/{slug}/metrials', 'admin\course\CourseController@metrialStore')->name('course.metrials');
+Route::get('/dashboard/metrials/course/{id}', 'admin\course\CourseController@editMetrials')->name('metrials.edit');
+
+
+
+
+Route::get('/course/{id}/{slug}/metrials', 'Pages\Course\CourseController@addCourseMetrial')->name('metrials.front');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

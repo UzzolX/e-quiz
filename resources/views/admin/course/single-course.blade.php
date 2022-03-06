@@ -57,7 +57,7 @@
 								</div>
 							</div>
 						</div>
-						<a href="tutorials.html" class="site-btn ">Tutorial</a>
+						<a href="{{route('metrials.front',[$course->id,$course->slug])}}" class="site-btn ">Tutorial</a>
 					</div>
 				</div>
 			</div>

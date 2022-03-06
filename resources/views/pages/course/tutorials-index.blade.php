@@ -40,7 +40,7 @@
 				<div class="col-xl-3 sidebar">
 					<div class="sb-widget-item">
 						<h4 class="sb-w-title">Tutorials</h4>
-						<ul>
+						{{-- <ul>
 							<li><a href="#">Pre course servay</a></li>
 							<li><a href="#">Getting Start</a></li>
 							<li><a href="#">Materials</a></li>
@@ -50,121 +50,24 @@
 							<li><a href="#">Section: C</a></li>
 							<li><a href="#">Section: D</a></li>
 							<li><a href="#">Section: E</a></li>
-						</ul>
+						</ul> --}}
 					</div>
 					
-				<div class="sb-widget-item">
+				{{-- <div class="sb-widget-item">
 					<div class="add">
 						<a href="#"><i class="fas fa-plus-circle"></i></a>
 					</div>
-				</div>
+				</div> --}}
 				</div>
 				<div class="col-xl-9 tutorials-content">
 					<div class="tutorials-inner">
+						@foreach ($courseMetrials as $k =>  $metrial)
 						<div class="single-tutorials">
-							<video width="90%" height="75%" controls autoplay>
-								<source src="assets/videos/02. Connect JS file to HTML - JavaScript by Simanta Paul.mp4" type="video/mp4">
-								<source src="movie.ogg" type="video/ogg">
-							</video>
-							<h5>Video 01</h5>
-							<p>Introduction</p>
+							<iframe width="150" height="150" src="https://www.youtube.com/embed/{{ $metrial->link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<h5>Video {{ ++$k }}</h5>
+							<p>{{ $metrial->topic }}</p>
 						</div>
-						<div class="single-tutorials">
-							<video width="90%" height="75%" controls>
-								<source src="assets/videos/02. Connect JS file to HTML - JavaScript by Simanta Paul.mp4" type="video/mp4">
-								<source src="movie.ogg" type="video/ogg">
-							</video>
-							<h5>Video 02</h5>
-							<p>Introduction</p>
-						</div>
-						<div class="single-tutorials">
-							<video width="90%" height="75%" controls>
-								<source src="assets/videos/02. Connect JS file to HTML - JavaScript by Simanta Paul.mp4" type="video/mp4">
-								<source src="movie.ogg" type="video/ogg">
-							</video>
-							<h5>Video 03</h5>
-							<p>Introduction</p>
-						</div>
-						<div class="single-tutorials">
-							<video width="90%" height="75%" controls>
-								<source src="assets/videos/02. Connect JS file to HTML - JavaScript by Simanta Paul.mp4" type="video/mp4">
-								<source src="movie.ogg" type="video/ogg">
-							</video>
-							<h5>Video 04</h5>
-							<p>Introduction</p>
-						</div>
-						<div class="single-tutorials">
-							<video width="90%" height="75%" controls>
-								<source src="assets/videos/02. Connect JS file to HTML - JavaScript by Simanta Paul.mp4" type="video/mp4">
-								<source src="movie.ogg" type="video/ogg">
-							</video>
-							<h5>Video 05</h5>
-							<p>Introduction</p>
-						</div>
-						<div class="single-tutorials">
-							<video width="90%" height="75%" controls>
-								<source src="assets/videos/02. Connect JS file to HTML - JavaScript by Simanta Paul.mp4" type="video/mp4">
-								<source src="movie.ogg" type="video/ogg">
-							</video>
-							<h5>Video 06</h5>
-							<p>Introduction</p>
-						</div>
-						<div class="single-tutorials">
-							<video width="90%" height="75%" controls>
-								<source src="assets/videos/02. Connect JS file to HTML - JavaScript by Simanta Paul.mp4" type="video/mp4">
-								<source src="movie.ogg" type="video/ogg">
-							</video>
-							<h5>Video 07</h5>
-							<p>Introduction</p>
-						</div>
-						<div class="single-tutorials">
-							<video width="90%" height="75%" controls>
-								<source src="assets/videos/02. Connect JS file to HTML - JavaScript by Simanta Paul.mp4" type="video/mp4">
-								<source src="movie.ogg" type="video/ogg">
-							</video>
-							<h5>Video 08</h5>
-							<p>Introduction</p>
-						</div>
-						<div class="single-tutorials">
-							<video width="90%" height="75%" controls>
-								<source src="assets/videos/02. Connect JS file to HTML - JavaScript by Simanta Paul.mp4" type="video/mp4">
-								<source src="movie.ogg" type="video/ogg">
-							</video>
-							<h5>Video 09</h5>
-							<p>Introduction</p>
-						</div>
-						<div class="single-tutorials">
-							<video width="90%" height="75%" controls>
-								<source src="assets/videos/02. Connect JS file to HTML - JavaScript by Simanta Paul.mp4" type="video/mp4">
-								<source src="movie.ogg" type="video/ogg">
-							</video>
-							<h5>Video 10</h5>
-							<p>Introduction</p>
-						</div>
-						<div class="single-tutorials">
-							<video width="90%" height="75%" controls>
-								<source src="assets/videos/02. Connect JS file to HTML - JavaScript by Simanta Paul.mp4" type="video/mp4">
-								<source src="movie.ogg" type="video/ogg">
-							</video>
-							<h5>Video 11</h5>
-							<p>Introduction</p>
-						</div>
-						<div class="single-tutorials">
-							<video width="90%" height="75%" controls>
-								<source src="assets/videos/02. Connect JS file to HTML - JavaScript by Simanta Paul.mp4" type="video/mp4">
-								<source src="movie.ogg" type="video/ogg">
-							</video>
-							<h5>Video 12</h5>
-							<p>Introduction</p>
-						</div>
-						<div class="single-tutorials">
-							<video width="90%" height="75%" controls>
-								<source src="assets/videos/02. Connect JS file to HTML - JavaScript by Simanta Paul.mp4" type="video/mp4">
-								<source src="movie.ogg" type="video/ogg">
-							</video>
-							<h5>Video 13</h5>
-							<p>Introduction</p>
-						</div>
+						@endforeach
 					</div>
 				</div>
 			</div>
