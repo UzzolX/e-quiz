@@ -37,7 +37,7 @@
                 <!-- categorie -->
                 @foreach ($categories as $category)
                 <div class="col-lg-4 col-md-6">
-                    <a href="course-list.html">
+                    <a href="{{route('category.courses',[$category->id])}}">
                         <div class="categorie-item">
                             <div class="ci-thumb set-bg" data-setbg="{{ URL::to('/') }}/images/category/{{ $category->image }}"></div>
                             <div class="ci-text">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin\course;
 
 use Illuminate\Http\Request;
 use App\Course;
+use App\Category;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
@@ -24,7 +25,8 @@ class CourseController extends Controller
 
     public function create()
     {
-        return view('admin.course.course-create');
+        $categories = Category::latest()->paginate(10);
+        return view('admin.course.course-create', compact('categories'));
     }
 
 
@@ -34,7 +36,7 @@ class CourseController extends Controller
             'title'    =>  'required',
             'description'     =>  'required',
             'image'         =>  'required|mimes:jpeg,jpg,png|max:2048',
-            'category' => 'string|max:30'
+            'category' => 'required'
         ]);
 
         $image = $request->file('image');
@@ -67,7 +69,8 @@ class CourseController extends Controller
     public function edit($id)
     {
         $course = Course::findOrFail($id);
-        return view('admin.course.course-edit', compact('course'));
+        $categories = Category::latest()->paginate(10);
+        return view('admin.course.course-edit', compact('course', 'categories'));
     }
 
     public function update(Request $request, $id)

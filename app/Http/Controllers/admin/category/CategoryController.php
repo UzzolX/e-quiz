@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin\category;
 
 use Illuminate\Http\Request;
 use App\Category;
+use App\Course;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 

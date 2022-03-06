@@ -39,6 +39,7 @@ Route::get('/dashboard/category/{id}', 'admin\category\CategoryController@show')
 Route::get('/dashboard/category/{id}/edit', 'admin\category\CategoryController@edit')->name('category.edit');
 Route::post('/dashboard/category/{id}/update', 'admin\category\CategoryController@update')->name('category.update');
 Route::get('/dashboard/category/{id}/delete', 'admin\category\CategoryController@destroy')->name('category.delete');
+Route::get('/category/{id}/courses', 'WelcomeController@catCourse')->name('category.courses');
 
 
 Route::get('/contact-us', 'Pages\Contact\ContactController@index')->name('contact.index');
@@ -66,6 +67,7 @@ Route::get('/dashboard/metrials/course/{id}', 'admin\course\CourseController@edi
 
 
 Route::get('/course/{id}/{slug}/metrials', 'Pages\Course\CourseController@addCourseMetrial')->name('metrials.front');
+
 
 
 Auth::routes();

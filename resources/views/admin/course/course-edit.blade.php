@@ -55,10 +55,9 @@
                 <div class="select">
                 <select name="category" required>
                     <option value="" disabled selected>Select category</option>
-                    <option value="html" {{ $course->category === 'html' ? 'selected' : null }}>HTML</option>
-                    <option value="css" {{ $course->category === 'css' ? 'selected' : null }}>CSS</option>
-                    <option value="javascript" {{ $course->category === 'javascript' ? 'selected' : null }}>JavaScript</option>
-                    <option value="php" {{ $course->category === 'php' ? 'selected' : null }}>PHP</option>
+                    @foreach ($categories as $category)
+                    <option value="{{$category->id}}" {{ old('category') === 'html' ? 'selected' : null }}>{{$category->title}}</option>
+                    @endforeach
                 </select>
                 @if ($errors->has('category'))
                 <span class="invalid-feedback" role="alert">
